@@ -10,7 +10,7 @@ namespace Slide02
 {
     class Program
     {
-        static void Main(string[] args)
+        static void MainX(string[] args)
         {
             var obj = new PublicClass();
             Console.WriteLine(obj.PublicMethod());
