@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Lecture01.Lib;
 
-namespace Slide02
+namespace Slide12
 {
     class Program
     {

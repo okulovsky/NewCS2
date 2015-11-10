@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide03
+namespace Slide13
 {
     class Point
     {
@@ -17,7 +17,7 @@ namespace Slide03
 
     class Program
     {
-        static void Main(string[] args)
+        static void MainX(string[] args)
         {
             int N = 10000000;
             var timer = new Stopwatch();
