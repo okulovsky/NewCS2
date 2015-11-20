@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide02
+namespace Slide12
 {
     public class BaseClass
     {
         public virtual void DoStuff() { Console.WriteLine("Base class"); }
     }
 
-    public class DerivedClass : BaseClass
-    {
-        public override /*new*/ void DoStuff() { Console.WriteLine("Inherited class"); }
-    }
-    
+	public class DerivedClass : BaseClass
+	{
+		public override /*new*/ void DoStuff() { Console.WriteLine("Inherited class"); }
+	}
+	
 
     class Program
     {

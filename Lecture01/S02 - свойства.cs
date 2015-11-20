@@ -70,7 +70,7 @@ namespace Slide02
 			}
 		}
         
-		public static void Main()
+		public static void MainX()
 		{
 			new MyClass().TestPropertyWithLogging();
 		}

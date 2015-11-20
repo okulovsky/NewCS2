@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SlideXX
+{
+	class BaseClass
+	{
+		public virtual void Print()
+		{
+			Console.WriteLine("Base class");
+		}
+	}
+
+	class DerivedClass : BaseClass
+	{
+		public override void Print()
+		{
+			Console.WriteLine("Derived class");
+		}
+	}
+
+
+    public class Program
+    {
+        static void MainX(string[] args)
+        {
+			var baseObj = new BaseClass();
+			baseObj.Print();
+
+			var derivedObj = new DerivedClass();
+			derivedObj.Print();
+        }
+    }
+}

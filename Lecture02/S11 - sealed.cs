@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide01
+namespace Slide11
 {
     public /*sealed*/ class MyClass
     {

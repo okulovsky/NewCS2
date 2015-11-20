@@ -8,16 +8,16 @@ namespace Slide04
 {
     public class MyClass
     {
-		public int this[int index]
+		public int this[int index, string s]
 		{
 			get { throw new NotImplementedException(); }
 			set { throw new NotImplementedException(); }
 		}
 		
-		public static void Main()
+		public static void MainX()
 		{
 			var obj = new MyClass();
-			obj[10] = 10;
+			obj[10, "abd"] = 10;
 		}
     }
 }

@@ -17,6 +17,7 @@ namespace Slide12
             //Console.WriteLine(obj.PrivateMethod());
             //Console.WriteLine(obj.InternalMethod());
 
+			//var obj1 = new InternalClass();
             
         }
     }

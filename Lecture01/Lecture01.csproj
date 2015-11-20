@@ -46,7 +46,7 @@
     <Compile Include="S03 - конструкторы и поля readonly.cs" />
     <Compile Include="S12 - модификатор Internal.cs" />
     <Compile Include="S11 - параметры по умолчанию.cs" />
-    <Compile Include="S13 - классы и структуры.cs" />
+    <Compile Include="S10 - классы и структуры.cs" />
     <Compile Include="S02 - свойства.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,7 +12,7 @@ namespace Lecture01.Lib
         private int PrivateMethod() { return 0; }
         internal int InternalMethod() { return 0; }
 
-        internal InternalClass InternalMethodReturnsInternalClass() { return new InternalClass(); }
+       // public InternalClass InternalMethodReturnsInternalClass() { return new InternalClass(); }
     }
 
 

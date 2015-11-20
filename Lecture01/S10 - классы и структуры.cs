@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide13
+namespace Slide10
 {
-    class Point
+    struct Point
     {
         public int X;
         public int Y;
@@ -17,17 +17,19 @@ namespace Slide13
 
     class Program
     {
-        static void MainX(string[] args)
+        static void Main(string[] args)
         {
             int N = 10000000;
             var timer = new Stopwatch();
 
             var before = GC.GetTotalMemory(false);
             timer.Start();
-            var points = new Point[N];
-            for (int i = 0; i < points.Length; i++)
-                points[i] = new Point();
-            var after = GC.GetTotalMemory(false);
+            
+			var points = new Point[N];
+			//for (int i = 0; i < points.Length; i++)
+			//	points[i] = new Point();
+            
+			var after = GC.GetTotalMemory(false);
             timer.Stop();
 
             Console.WriteLine((double)(after - before) / N);
