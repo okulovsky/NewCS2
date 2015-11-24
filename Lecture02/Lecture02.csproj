@@ -51,6 +51,7 @@
     <Compile Include="S12 - new.cs" />
     <Compile Include="S01 - базовый класс.cs" />
     <Compile Include="S02 - виртуальный метод.cs" />
+    <Compile Include="S13 - explicit реализация интерфейсов.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>

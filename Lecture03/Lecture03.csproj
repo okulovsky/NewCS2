@@ -42,10 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S03 - требования к дженерик-аргументу.cs" />
+    <Compile Include="S02 - дженерик-класс.cs" />
+    <Compile Include="S01 - проблема даункаста.cs" />
+    <Compile Include="S04 - дженерик-метод.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="S00 - пререквизиты.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
