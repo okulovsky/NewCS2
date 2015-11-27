@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S01 - public, private, static.cs" />
-    <Compile Include="S04 - индексаторы.cs" />
-    <Compile Include="S03 - конструкторы и поля readonly.cs" />
-    <Compile Include="S12 - модификатор Internal.cs" />
-    <Compile Include="S11 - параметры по умолчанию.cs" />
-    <Compile Include="S10 - классы и структуры.cs" />
-    <Compile Include="S02 - свойства.cs" />
+    <Compile Include="S11 - public, private, static.cs" />
+    <Compile Include="S43 - индексаторы.cs" />
+    <Compile Include="S21 - конструкторы и поля readonly.cs" />
+    <Compile Include="S50 - классы и структуры.cs" />
+    <Compile Include="S12 - internal.cs" />
+    <Compile Include="S31 - параметры по умолчанию.cs" />
+    <Compile Include="S51 - оптимизация за счет структур.cs" />
+    <Compile Include="S41- концепция свойств.cs" />
+    <Compile Include="S22 - порядок инициализации.cs" />
+    <Compile Include="S42 - способы задания свойств.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

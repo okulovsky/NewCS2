@@ -32,6 +32,9 @@ namespace SlideXX
 
 			var derivedObj = new DerivedClass();
 			derivedObj.Print();
+
+			var derivedAsBase = (BaseClass)derivedObj;
+			derivedAsBase.Print();
         }
     }
 }

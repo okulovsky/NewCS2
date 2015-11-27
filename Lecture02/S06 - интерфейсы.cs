@@ -7,25 +7,34 @@ using System.Threading.Tasks;
 
 namespace Slide06
 {
-	interface IFigure
+	public interface IFigure
 	{
 		Point Location { get; set; }
-		abstract bool Contains(Point p);
-		abstract double Area { get; }
-		
+		bool Contains(Point p);
+		double Area { get; }
+	}
+
+	public static class IFigureExtensions
+	{
+		public static bool Contains(this IFigure obj, Point[] p)
+		{
+			foreach (var e in p)
+				if (obj.Contains(e)) return true;
+			return false;
+		}
 	}
 
 	class Square : IFigure
 	{
 		public Point Location { get; set; }
 		public int Size { get; set; }
-		public override bool Contains(Point p)
+		public bool Contains(Point p)
 		{
 			return 
 				Math.Abs(p.X - Location.X) < Size/2 && 
 				Math.Abs(p.Y - Location.Y) < Size / 2;
 		}
-		public override double Area
+		public double Area
 		{
 			get
 			{
@@ -38,12 +47,12 @@ namespace Slide06
 	{
 		public Point Location { get; set; }
 		public int Radius { get; set; }
-		public override bool Contains(Point p)
+		public bool Contains(Point p)
 		{
 			return
 				Math.Sqrt(Math.Pow(p.X - Location.X, 2) + Math.Pow(p.Y - Location.Y, 2)) < Radius;
 		}
-		public override double Area
+		public double Area
 		{
 			get
 			{

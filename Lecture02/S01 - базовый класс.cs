@@ -8,28 +8,28 @@ namespace Slide01
 {
 	class BaseClass
 	{
-		public int PublicField;
-		private int PrivateField;
-		protected int ProtectedField;
+		public int publicField;
+		private int privateField;
+		protected int protectedField;
 
 		public void PublicMethod()
 		{
-			Console.WriteLine(PublicField);
-			Console.WriteLine(PrivateField);
-			Console.WriteLine(ProtectedField);
+			Console.WriteLine(publicField);
+			Console.WriteLine(privateField);
+			Console.WriteLine(protectedField);
 		}
 	}
 
 	class DerivedClass : BaseClass
 	{
-		public int AnotherPublicField;
+		public int anotherPublicField;
 		
 		public void AnotherPublicMethod()
 		{
-			Console.WriteLine(PublicField);
-			//Console.WriteLine(PrivateField);
-			Console.WriteLine(ProtectedField);
-			Console.WriteLine(AnotherPublicField);
+			Console.WriteLine(publicField);
+			//Console.WriteLine(privateField);
+			Console.WriteLine(protectedField);
+			Console.WriteLine(anotherPublicField);
 		}
 	}
 
@@ -38,10 +38,10 @@ namespace Slide01
         static void MainX(string[] args)
         {
 			var obj = new DerivedClass();
-			Console.WriteLine(obj.PublicField);
-			//Console.WriteLine(PrivateField);
-			//Console.WriteLine(obj.ProtectedField);
-			Console.WriteLine(obj.AnotherPublicField);
+			Console.WriteLine(obj.publicField);
+			//Console.WriteLine(obj.privateField);
+			//Console.WriteLine(obj.protectedField);
+			Console.WriteLine(obj.anotherPublicField);
         }
     }
 }

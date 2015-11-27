@@ -13,8 +13,9 @@ namespace Slide04
 		{
 			if (array.Length == 0) throw new ArgumentException();
 			T max = array[0];
-			for (int i=1;i<array.Length;i++)
-				if (max.CompareTo(array[i])<
+			for (int i = 1; i < array.Length; i++)
+				if (max.CompareTo(array[i]) < 0) max = array[i];
+			return max;
 		}
     }
 }

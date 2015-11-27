@@ -13,13 +13,13 @@ namespace Slide12
 
 	public class DerivedClass : BaseClass
 	{
-		public override /*new*/ void DoStuff() { Console.WriteLine("Inherited class"); }
+		public new void DoStuff() { Console.WriteLine("Inherited class"); }
 	}
 	
 
     class Program
     {
-        static void Main(string[] args)
+        static void MainX(string[] args)
         {
             DerivedClass derived = new DerivedClass();
             derived.DoStuff();
