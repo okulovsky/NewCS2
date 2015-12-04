@@ -18,6 +18,7 @@ namespace SlideXX
 	{
 		public override void Print()
 		{
+			base.Print();
 			Console.WriteLine("Derived class");
 		}
 	}

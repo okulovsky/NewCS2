@@ -18,7 +18,7 @@ namespace Slide24
 
     class Program
     {
-        public static void MainX()
+        public static void Main()
         {
             var p = new Receiver<Employee>();
             Console.WriteLine(p is IReceiver<Employee>);

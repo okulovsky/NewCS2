@@ -33,9 +33,10 @@ namespace Slide13
 
 	class Program
 	{
-		public static void Main()
+		public static void MainX()
 		{
 			var obj = new Class();
+			//obj.Method();
 			(obj as IInterface1).Method();
 			(obj as IInterface2).Method();
 			

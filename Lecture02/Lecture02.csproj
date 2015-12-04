@@ -53,12 +53,12 @@
     <Compile Include="S32 - new.cs" />
     <Compile Include="S01 - базовый класс.cs" />
     <Compile Include="S02 - виртуальный метод.cs" />
-    <Compile Include="S13 - explicit реализация интерфейсов.cs" />
+    <Compile Include="S05 - explicit реализация интерфейсов.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="S00 - пререквизиты.odp" />
+    <None Include="Презентация.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

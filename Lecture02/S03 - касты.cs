@@ -29,12 +29,14 @@ namespace Slide03
 
 
             Person clientAsPerson = client;
+			Console.WriteLine(clientAsPerson is Client);
             Client correctClient1 = clientAsPerson as Client;
             Client correctClient2 = (Client)clientAsPerson;
 
             Client incorrentClient1 = person as Client; // = null
             Client incorrectClient2 = (Client)person; //выкинет исключение, т.к. person не является Client
-            //Client incorrectClient3 = (Client)employee; // синтаксически невозможно
+            
+			//Client incorrectClient3 = (Client)employee; // синтаксически невозможно
             
         }
     }

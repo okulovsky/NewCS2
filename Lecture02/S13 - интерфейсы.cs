@@ -16,10 +16,10 @@ namespace Slide06
 
 	public static class IFigureExtensions
 	{
-		public static bool Contains(this IFigure obj, Point[] p)
+		public static bool Contains(this IFigure obj, Point[] points)
 		{
-			foreach (var e in p)
-				if (obj.Contains(e)) return true;
+			foreach (var p in points)
+				if (obj.Contains(p)) return true;
 			return false;
 		}
 	}
@@ -78,6 +78,8 @@ namespace Slide06
 
 			foreach (var e in scene)
 				Console.WriteLine(e.Area);
+
+			scene[0].Contains(new Point[0]);
         }
     }
 }

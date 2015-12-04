@@ -28,9 +28,10 @@ namespace Slide05
     {
        
 
-        static void Main()
+        static void MainX()
         {
-            Console.WriteLine(new [] { 1, 2, 4}.FindMax());
+            var a= new [] { 1, 2, 4}.FindMax();
+			Console.WriteLine(a);
         }
     }
 }

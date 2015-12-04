@@ -12,7 +12,7 @@ namespace Slide04
 			where T : IComparable
 		{
             bool firstTime = true;
-            T max = default(T);
+			T max = default(T);
             foreach(var e in en)
                 if (firstTime || max.CompareTo(e) < 0)
                 {
@@ -24,7 +24,8 @@ namespace Slide04
 
         static void MainX()
         {
-            Console.WriteLine(FindMax(new[] { 3, 4, 1 }));
+			var a = FindMax(new[] { 3, 4, 1 });
+			Console.WriteLine(a);
         }
     }
 }

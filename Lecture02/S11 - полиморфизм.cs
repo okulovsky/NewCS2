@@ -5,15 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide03
+namespace Slide11
 {
 	class Figure
 	{
 		public Point Location { get; set; }
+
 		public virtual bool Contains(Point p)
 		{
 			return false;
 		}
+
+		public bool Contains(Point[] points)
+		{
+			foreach (var p in points)
+				if (Contains(p)) return true;
+			return false;
+		}
+
 		public virtual double GetArea()
 		{
 			return 0;
