@@ -14,7 +14,7 @@ namespace Slide07
 
 	struct MyStruct
 	{
-		public string field; // = "значение поля не изменено" - в структурах так нельзя
+		public string field ;//= "значение поля не изменено" ;//- в структурах так нельзя
 	}
 
 	class Program
@@ -39,16 +39,16 @@ namespace Slide07
 			return new MyStruct { field = "значение поля изменено" };
 		}
 
-		public static void Main()
+		public static void MainX()
 		{
 			var c = new MyClass();
 			UpdateClass(c);
 			Console.WriteLine(c.field);
 
 			var s = new MyStruct() { field = "значение поля не изменено" };
-			UpdateStructWrong(s);
+//			UpdateStructWrong(s);
 //			UpdateStructCorrect(ref s);
-//			s = UpdateStructPerfect(s);
+			s = UpdateStructPerfect(s);
 			Console.WriteLine(s.field);
 		}
 	}

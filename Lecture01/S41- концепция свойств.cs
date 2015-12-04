@@ -8,6 +8,18 @@ namespace Slide024
 {
 	public class MyClass
 	{
+		private int oddNumber;
+		public int GetOddNumber() { return oddNumber; }
+		public void SetOddNumber(int value)
+		{
+			if (value % 2 == 0)
+			{
+				throw new ArgumentException();
+			}
+			oddNumber = value;
+		}
+
+
 		private int evenNumber;
 		public int EvenNumber
 		{
@@ -27,6 +39,7 @@ namespace Slide024
 				evenNumber = value;
 			}
 		}
+
 	}
 
 	class Program
@@ -34,6 +47,10 @@ namespace Slide024
 		public static void MainX()
 		{
 			var obj = new MyClass();
+			obj.SetOddNumber(1);
+			obj.SetOddNumber(obj.GetOddNumber() + 2);
+			
+			
 			Console.WriteLine("Присвоение свойству значения");
 			obj.EvenNumber = 2;
 

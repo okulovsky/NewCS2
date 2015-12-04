@@ -39,7 +39,7 @@ namespace Slide01
 			var obj = new MyClass();
 			obj.publicField = 1;
 			obj.PublicMethod();
-			//нельзя обащаться к приватным членам класса извне класса
+			//нельзя обращаться к приватным членам класса извне класса
 			//obj.privateField = 1;
 			//obj.PrivateMethod();
 
@@ -53,8 +53,6 @@ namespace Slide01
 			//нельзя обращаться к статическим членам через имя объекта
 			//obj.publicStaticField = 1;
 			//obj.PublicStaticMethod();
-
-
 		}
 	}
 }

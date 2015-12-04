@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,12 +52,13 @@
     <Compile Include="S41- концепция свойств.cs" />
     <Compile Include="S22 - порядок инициализации.cs" />
     <Compile Include="S42 - способы задания свойств.cs" />
+    <Compile Include="S32 - перегрузка операторов.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="S00 - пререквизиты.odp" />
+    <None Include="S00 - презентация.odp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lecture01.Lib\Lecture01.Lib.csproj">

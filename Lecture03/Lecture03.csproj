@@ -41,11 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S24 - контравариация.cs" />
+    <Compile Include="S22 - инвариантность интерфейсов.cs" />
+    <Compile Include="S12 - extension дженерик-метод.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S03 - требования к дженерик-аргументу.cs" />
     <Compile Include="S02 - дженерик-класс.cs" />
     <Compile Include="S01 - проблема даункаста.cs" />
-    <Compile Include="S04 - дженерик-метод.cs" />
+    <Compile Include="S11 - дженерик-метод.cs" />
+    <Compile Include="S21 - инвариантность.cs" />
+    <Compile Include="S23 - ковариация.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>

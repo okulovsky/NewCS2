@@ -10,7 +10,7 @@ namespace Slide02
 	{
 		public int fieldWithDeafultValue = 5;
 		public int publicField;
-		public int publicReadonlyField;
+		public readonly int publicReadonlyField;
 		static public int staticPublicField;
 		static public readonly int staticPublicReadonlyField;
 
@@ -27,6 +27,11 @@ namespace Slide02
 		public MyClass()
 			: this(2)
 		{ }
+
+		void Method()
+		{
+			//publicReadonlyField = 1;
+		}
 
 		static MyClass()
 		{

@@ -15,7 +15,7 @@ namespace Slide10
 
     class Program
     {
-        static void MainX(string[] args)
+        static void Main(string[] args)
         {
             int N = 10000000;
             var timer = new Stopwatch();
