@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Slide11
 {
-    public /*sealed*/ class MyClass
+    public  class MyClass
     {
     }
 

@@ -5,29 +5,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide04
+namespace Slide06
 {
-	class Figure
+	public interface IFigure
 	{
-		public Point Location { get; set; }
-		public virtual bool Contains(Point p)
-		{
-			return false;
-		}
-		public virtual double Area { get { return 0; } }
-		
+		Point Location { get; set; }
+		bool Contains(Point p);
+		double Area { get; }
 	}
 
-	class Square : Figure
+	public static class IFigureExtensions
 	{
+		public static bool Contains(this IFigure obj, Point[] points)
+		{
+			foreach (var p in points)
+				if (obj.Contains(p)) return true;
+			return false;
+		}
+	}
+
+	class Square : IFigure
+	{
+		public Point Location { get; set; }
 		public int Size { get; set; }
-		public override bool Contains(Point p)
+		public bool Contains(Point p)
 		{
 			return 
 				Math.Abs(p.X - Location.X) < Size/2 && 
 				Math.Abs(p.Y - Location.Y) < Size / 2;
 		}
-		public override double Area
+		public double Area
 		{
 			get
 			{
@@ -36,15 +43,16 @@ namespace Slide04
 		}
 	}
 
-	class Circle : Figure
+	class Circle : IFigure
 	{
+		public Point Location { get; set; }
 		public int Radius { get; set; }
-		public override bool Contains(Point p)
+		public bool Contains(Point p)
 		{
 			return
 				Math.Sqrt(Math.Pow(p.X - Location.X, 2) + Math.Pow(p.Y - Location.Y, 2)) < Radius;
 		}
-		public override double Area
+		public double Area
 		{
 			get
 			{
@@ -58,11 +66,10 @@ namespace Slide04
     {
         static void MainX(string[] args)
         {
-			var scene = new List<Figure>
+			var scene = new List<IFigure>
 			{
 				new Square { Location=new Point(0,0), Size=2 },
-				new Circle { Location=new Point(1,1), Radius=3 },
-				new Figure { Location=new Point(0,1) }
+				new Circle { Location=new Point(1,1), Radius=3 }
 			};
 
 			var point = new Point(1, 0);
@@ -71,6 +78,8 @@ namespace Slide04
 
 			foreach (var e in scene)
 				Console.WriteLine(e.Area);
+
+			scene[0].Contains(new Point[0]);
         }
     }
 }

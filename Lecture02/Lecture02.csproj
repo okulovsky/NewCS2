@@ -42,21 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S04 - интерфейсы.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="S06 - интерфейсы.cs" />
-    <Compile Include="S05 - абстрактные классы.cs" />
-    <Compile Include="S04 - виртуальные свойства.cs" />
-    <Compile Include="S03 - полиморфизм.cs" />
-    <Compile Include="S11 - sealed.cs" />
-    <Compile Include="S12 - new.cs" />
+    <Compile Include="S03 - касты.cs" />
+    <Compile Include="S13 - интерфейсы.cs" />
+    <Compile Include="S13 - абстрактные классы.cs" />
+    <Compile Include="S12 - виртуальные свойства.cs" />
+    <Compile Include="S11 - полиморфизм.cs" />
+    <Compile Include="S31 - sealed.cs" />
+    <Compile Include="S32 - new.cs" />
     <Compile Include="S01 - базовый класс.cs" />
     <Compile Include="S02 - виртуальный метод.cs" />
-    <Compile Include="S13 - explicit реализация интерфейсов.cs" />
+    <Compile Include="S05 - explicit реализация интерфейсов.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="S00 - пререквизиты.odp" />
+    <None Include="Презентация.odp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

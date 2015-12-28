@@ -17,14 +17,17 @@ namespace Slide01
 			Console.WriteLine(publicField);
 			Console.WriteLine(privateField);
 			Console.WriteLine(publicStaticField);
+			PrivateMethod();
 		}
 		
 		private void PrivateMethod() {}
 		
 		public static void PublicStaticMethod() 
 		{
-			//Console.WriteLine(publicField);
+			//нельзя обращаться к нестатическому полю из статического метода
+			//Console.WriteLine(publicField); 
 			//Console.WriteLine(privateField);
+
 			Console.WriteLine(publicStaticField);
 		}
 	}
@@ -36,18 +39,20 @@ namespace Slide01
 			var obj = new MyClass();
 			obj.publicField = 1;
 			obj.PublicMethod();
+			//нельзя обращаться к приватным членам класса извне класса
+			//obj.privateField = 1;
+			//obj.PrivateMethod();
 
 			MyClass.publicStaticField = 1;
 			MyClass.PublicStaticMethod();
 
+			//нельзя обращаться к нестатическим членам через имя класса
 			//MyClass.publicField = 1;
 			//MyClass.PublicMethod();
 
+			//нельзя обращаться к статическим членам через имя объекта
 			//obj.publicStaticField = 1;
 			//obj.PublicStaticMethod();
-
-			//obj.privateField = 1;
-			//obj.PrivateMethod();
 		}
 	}
 }

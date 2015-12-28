@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SlideXX
+namespace Slide13
 {
     interface IInterface1
 	{
@@ -19,14 +19,28 @@ namespace SlideXX
 	public class Class : IInterface1, IInterface2
 	{
 
-		public void Method()
+		void IInterface1.Method()
 		{
-			//Do something
+			Console.WriteLine("Interface 1");
 		}
 
 		void IInterface2.Method()
 		{
-			//Do something else
+			Console.WriteLine("Interface 2");
+		}
+	}
+
+
+	class Program
+	{
+		public static void MainX()
+		{
+			var obj = new Class();
+			//obj.Method();
+			(obj as IInterface1).Method();
+			(obj as IInterface2).Method();
+			
+			
 		}
 	}
 

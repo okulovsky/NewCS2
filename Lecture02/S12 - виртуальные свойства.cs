@@ -5,19 +5,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Slide03
+namespace Slide12
 {
 	class Figure
 	{
 		public Point Location { get; set; }
+
 		public virtual bool Contains(Point p)
 		{
 			return false;
 		}
-		public virtual double GetArea()
+
+		public bool Contains(Point[] points)
 		{
-			return 0;
+			foreach (var p in points)
+				if (Contains(p)) return true;
+			return false;
 		}
+
+		public virtual double Area { get { return 0; } }
 		
 	}
 
@@ -30,9 +36,12 @@ namespace Slide03
 				Math.Abs(p.X - Location.X) < Size/2 && 
 				Math.Abs(p.Y - Location.Y) < Size / 2;
 		}
-		public override double GetArea()
+		public override double Area
 		{
-			return Math.Pow(Size, 2);
+			get
+			{
+				return Math.Pow(Size, 2);
+			}
 		}
 	}
 
@@ -44,9 +53,12 @@ namespace Slide03
 			return
 				Math.Sqrt(Math.Pow(p.X - Location.X, 2) + Math.Pow(p.Y - Location.Y, 2)) < Radius;
 		}
-		public override double GetArea()
+		public override double Area
 		{
-			return Math.PI * Math.Pow(Radius, 2);
+			get
+			{
+				return Math.PI * Math.Pow(Radius, 2);
+			}
 		}
 	}
 
@@ -67,7 +79,7 @@ namespace Slide03
 				Console.WriteLine(e.Contains(point));
 
 			foreach (var e in scene)
-				Console.WriteLine(e.GetArea());
+				Console.WriteLine(e.Area);
         }
     }
 }

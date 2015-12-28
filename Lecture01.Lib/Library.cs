@@ -24,6 +24,7 @@ namespace Lecture01.Lib
     {
         public int SomeMethod()
         {
+			var obj = new InternalClass();
             return new PublicClass().InternalMethod();
         }
     }

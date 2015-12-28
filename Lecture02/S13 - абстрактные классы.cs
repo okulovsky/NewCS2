@@ -10,8 +10,22 @@ namespace Slide05
 	abstract class Figure
 	{
 		public Point Location { get; set; }
+
 		public abstract bool Contains(Point p);
+
+		public bool Contains(Point[] points)
+		{
+			foreach (var p in points)
+				if (Contains(p)) return true;
+			return false;
+		}
+
 		public abstract double Area { get; }
+
+		public override string ToString()
+		{
+			return GetType().Name+" at " + Location.ToString();
+		}
 		
 	}
 

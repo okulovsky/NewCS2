@@ -32,4 +32,14 @@ namespace Slide03
 				}
 		}
 	}
+
+	class Program
+	{
+		public static void MainX()
+		{
+			var list = new SortedList<int>();
+			var list2 = new SortedList<string>();
+
+		}
+	}
 }

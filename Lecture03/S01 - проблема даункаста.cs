@@ -22,7 +22,7 @@ namespace Slide01
 			var intArray = new List<int>();
 			intArray.Add(1);
 			intArray.Add(2);
-			//sintArray.Add("3");
+		//	intArray.Add("3");
 			sum = 0;
 			foreach (var e in intArray)
 				sum += e;

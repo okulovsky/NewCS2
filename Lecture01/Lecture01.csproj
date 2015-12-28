@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,19 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="S01 - public, private, static.cs" />
-    <Compile Include="S04 - индексаторы.cs" />
-    <Compile Include="S03 - конструкторы и поля readonly.cs" />
-    <Compile Include="S12 - модификатор Internal.cs" />
-    <Compile Include="S11 - параметры по умолчанию.cs" />
-    <Compile Include="S10 - классы и структуры.cs" />
-    <Compile Include="S02 - свойства.cs" />
+    <Compile Include="S11 - public, private, static.cs" />
+    <Compile Include="S43 - индексаторы.cs" />
+    <Compile Include="S21 - конструкторы и поля readonly.cs" />
+    <Compile Include="S50 - классы и структуры.cs" />
+    <Compile Include="S12 - internal.cs" />
+    <Compile Include="S31 - параметры по умолчанию.cs" />
+    <Compile Include="S51 - оптимизация за счет структур.cs" />
+    <Compile Include="S41- концепция свойств.cs" />
+    <Compile Include="S22 - порядок инициализации.cs" />
+    <Compile Include="S42 - способы задания свойств.cs" />
+    <Compile Include="S32 - перегрузка операторов.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="S00 - пререквизиты.odp" />
+    <None Include="S00 - презентация.odp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lecture01.Lib\Lecture01.Lib.csproj">

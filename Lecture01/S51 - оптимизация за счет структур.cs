@@ -13,8 +13,6 @@ namespace Slide10
         public int Y;
     }
 
-
-
     class Program
     {
         static void Main(string[] args)
@@ -26,16 +24,14 @@ namespace Slide10
             timer.Start();
             
 			var points = new Point[N];
-			//for (int i = 0; i < points.Length; i++)
-			//	points[i] = new Point();
+			for (int i = 0; i < points.Length; i++)
+				points[i] = new Point();
             
 			var after = GC.GetTotalMemory(false);
             timer.Stop();
 
             Console.WriteLine((double)(after - before) / N);
             Console.WriteLine(timer.ElapsedMilliseconds);
-       
-
         }
     }
 }
