@@ -13,25 +13,23 @@ namespace Slide03
         static void MainX(string[] args)
         {
 
-            //var binWriter = new BinaryWriter(File.Open("bin",FileMode.Create,FileAccess.Write));
-
-            var memoryStream = new MemoryStream();
-            var binWriter = new BinaryWriter(memoryStream);
-
-            for (int i = 1; i <= 1024; i*=2)
-                binWriter.Write(i);
-            binWriter.Flush();
-
-            int intLength = sizeof(int);
-            var bytes = memoryStream.GetBuffer();
-            for (int i=0;i<memoryStream.Position;i++)
+            using(var memoryStream = new MemoryStream())
+            using (var binWriter = new BinaryWriter(memoryStream))
             {
-                if (i%intLength==0) Console.WriteLine();
-                Console.Write("{0:X2} ", bytes[i]);
-            }
-            Console.WriteLine();
 
-            
+                for (int i = 1; i <= 1024; i *= 2)
+                    binWriter.Write(i);
+                binWriter.Flush();
+
+                int intLength = sizeof(int);
+                var bytes = memoryStream.GetBuffer();
+                for (int i = 0; i < memoryStream.Position; i++)
+                {
+                    if (i % intLength == 0) Console.WriteLine();
+                    Console.Write("{0:X2} ", bytes[i]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

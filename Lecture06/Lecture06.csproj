@@ -45,7 +45,7 @@
     <Compile Include="S01 - Потоки.cs" />
     <Compile Include="S02 - Исключения.cs" />
     <Compile Include="S03 - Сборщик мусора.cs" />
-    <Compile Include="S04 - Деструктор.cs" />
+    <Compile Include="S04 - Финализатор.cs" />
     <Compile Include="S05 - Disposable.cs" />
     <Compile Include="S06 - HtmlWriter.cs" />
     <Compile Include="Template.cs" />

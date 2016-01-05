@@ -12,7 +12,7 @@ namespace Slide025
     {
         static IEnumerable<string> ReadLines(string filename)
         {
-            var stream = new StreamReader(filename);
+            using(var stream = new StreamReader(filename))
             while(true)
             {
                 var str = stream.ReadLine();

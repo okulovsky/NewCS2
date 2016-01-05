@@ -19,7 +19,7 @@ namespace Slide04
             Console.WriteLine("Object {0,2} is created", number);
         }
 
-        ~FinalizableClass() //деструктор - метод, который вызывается при сборке мусора
+        ~FinalizableClass() //финализатор - метод, который вызывается при сборке мусора
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Object {0,2} is disposed", number);

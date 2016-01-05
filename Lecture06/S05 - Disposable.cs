@@ -27,7 +27,7 @@ namespace Slide05
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this); //деструктор не будет вызываться
+            GC.SuppressFinalize(this); //финализатор не будет вызываться
         }
 
         protected virtual void Dispose(bool fromDisposeMethod)

@@ -12,25 +12,28 @@ namespace Slide02
     {
         public static void MainX(string[] args)
         {
-            var textWriter = new StreamWriter("text");
-            textWriter.WriteLine("Привет, мир!");
-            textWriter.Flush();
-            textWriter.WriteLine("Привет еще раз");
-            textWriter.Close();
-
-            var textReader = new StreamReader("text");
+            using (var textWriter = new StreamWriter("text"))
+            {
+                textWriter.WriteLine("Строка 1");
+                textWriter.WriteLine("Строка 2");
+                textWriter.Flush();
+                textWriter.WriteLine("Строка 3");
+            }
+            
+            using(var textReader = new StreamReader("text"))
             while(true)
             {
                 var str = textReader.ReadLine();
                 if (str == null) break;
                 Console.WriteLine(str);
             }
-            textReader.Close();
 
-            var binWriter = new BinaryWriter(File.Open("bin",FileMode.Create,FileAccess.Write));
-            for (int i = 1; i <= 1024; i*=2)
-                binWriter.Write(i);
-            binWriter.Close();
+
+            using (var binWriter = new BinaryWriter(File.Open("bin", FileMode.Create, FileAccess.Write)))
+            {
+                for (int i = 1; i <= 1024; i *= 2)
+                    binWriter.Write(i);
+            }
 
             int intLength = sizeof(int);
             var bytes=File.ReadAllBytes("bin");
