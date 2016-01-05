@@ -86,16 +86,15 @@ namespace Slide02
         static void MakeReport5()
         {
             StreamWriter writer = null;
+            writer = new StreamWriter(Filename);
             try
             {
-                writer = new StreamWriter(Filename);
                 writer.WriteLine("Report header");
                 writer.WriteLine(CreateReport());
             }
             finally
             {
-                if (writer != null)
-                    writer.Close();
+                writer.Close();
             }
         }
     
