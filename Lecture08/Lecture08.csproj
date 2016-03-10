@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="S06 - перевыброс.cs" />
+    <Compile Include="S05 - однострочный try.cs" />
+    <Compile Include="S04 - обработка всех исключений.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S01 - try,catch,finally.cs" />
     <Compile Include="S02 - InnerException.cs" />

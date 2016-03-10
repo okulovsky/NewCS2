@@ -29,7 +29,7 @@ namespace Slide03
             }
             catch(Exception e)
             {
-                Console.WriteLine("Делаем что-то полезное...")
+                Console.WriteLine("Делаем что-то полезное...");
 
                 return null;
                 throw;
@@ -49,7 +49,7 @@ namespace Slide03
                 PrintException(e.InnerException);
         }
 
-        static void Main(string[] args)
+        static void MainX(string[] args)
         {
             try
             {
