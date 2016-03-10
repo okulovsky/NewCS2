@@ -49,7 +49,6 @@
     <Compile Include="S04 - NetworkStream.cs" />
     <Compile Include="S06 - CaesarStream.cs" />
     <Compile Include="S025 - ReadLines.cs" />
-    <Compile Include="S07 - Aсинхронная работа с файлами.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>

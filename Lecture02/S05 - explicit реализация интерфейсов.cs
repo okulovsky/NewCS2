@@ -33,7 +33,7 @@ namespace Slide13
 
 	class Program
 	{
-		public static void MainX()
+		public static void Main()
 		{
 			var obj = new Class();
 			//obj.Method();
